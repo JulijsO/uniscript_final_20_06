@@ -1,0 +1,1524 @@
+/* ___________________General_________________________ */
+
+@font-face {
+    font-family: "Uniscript";
+    src: url("./UniscriptLatinLIG_7-Regular.otf");
+
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Uniscript-kyr";
+    src: url("./Uniscript_kyrillisch_test-Regular.otf");
+
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Uniscript-chin";
+    src: url("./Uniscript_chin_test-Regular.otf");
+
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Uniscript-grie";
+    src: url("./Uniscript_grie_test-Regular.otf");
+
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Uniscript-hindi";
+    src: url("./Uniscript_hindi_test-Regular.otf");
+
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Uniscript-gen";
+    src: url("./UniscriptLatingen-Regular.otf");
+
+    font-weight: 100;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    font-family: Uniscript;
+}
+
+.speaking{
+    text-shadow: 0px 0px 10px red;
+    
+}
+
+/* .cursor-read {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    transform: translate(-100px, -25px);
+    pointer-events: none;
+    z-index:2000;
+} */
+
+
+/* _______________________________________________ */
+
+.pop-up-window {
+    height: 22vw;
+    width: 70vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -35vw;
+    margin-top: -11vw;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Courier New',
+        Courier,
+        monospace;
+    font-size: 1.5vw;
+    opacity: 100%;
+
+}
+
+.pop-up-wc {
+    margin-top: 2vw;
+
+}
+
+.pop-up-text {
+    margin-top: 4vw;
+}
+
+.cursor-expl {
+    width: 4vw;
+    position: absolute;
+    left: 10vw;
+    top: 12vw;
+}
+
+.close-button {
+    position: absolute;
+    left: 50%;
+    margin-left: -10vw;
+    margin-top: 3vw;
+    border: 1px solid rgb(0, 0, 0);
+    width: 20vw;
+}
+
+.close-button:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.fade {
+    opacity: 0.2;
+}
+
+/* ___________________Body_________________________ */
+
+body {
+    margin: 0;
+    font-family: Uniscript;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    overflow-y: hidden;
+    padding: 1vh 1vw 1vh 1vw;
+    height: 100vh;
+
+
+
+}
+
+/* ___________________Main-Container_________________________ */
+
+.main-container {
+    position: fixed;
+    left: 10.5vw;
+    flex-grow: 1;
+    display: inline-block;
+    width: 79vw;
+    height: 76vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: -1vh;
+    margin-bottom: 5vw;
+    z-index: 1;
+    padding-top: 2vh;
+
+
+}
+
+.shadow {
+    color: black;
+    width: 79vw;
+    height: 2px;
+    left: 10.5vw;
+    position: absolute;
+
+    z-index: 1;
+
+    -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.94);
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.94);
+}
+
+.sdw1 {
+    top: -0.4vh;
+}
+
+.sdw2 {
+    bottom: 21.5vh;
+    -webkit-box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.94);
+    box-shadow: 0px 0px 20px 15px rgba(0, 0, 0, 0.94);
+
+
+}
+
+.entwurf {
+    width: 79vw;
+    position: absolute;
+    left: 0;
+    opacity: 25%;
+}
+
+.platzhalter {
+    width: 79vw;
+    color: transparent;
+}
+
+
+/* ___________________Side-Bars_________________________ */
+
+.navbar {
+    display: block;
+    position: fixed;
+    margin-top: 1vh;
+    height: 76vh;
+    width: 8.5vw;
+    /* border-right:solid 1px; */
+    border-radius: 5px;
+    /* text-align: center; */
+    font-size: 3vw;
+    line-height: 5vw;
+    background-color: white;
+    z-index: 13;
+    border: solid 1px blue;
+
+
+}
+
+.nav-orientation {
+    height: 50vw;
+    width: 5vw;
+    position: absolute;
+    margin: 0, auto;
+    left: 50%;
+    top: 50%;
+    margin-left: -2.5vw;
+    margin-top: -25vw;
+    color: black;
+
+}
+
+.chapter-number {
+    font-size: 8vw;
+    position: absolute;
+    left: 50%;
+    margin-left: -3vw;
+    height: 6vh;
+    width: 6vw;
+    margin-top: -1vw;
+
+}
+
+.cn-2 {
+    margin-top: 58vh;
+}
+
+.cn-10 {
+    font-size: 3vw;
+    text-orientation: unset;
+    writing-mode: unset;
+    margin-top: unset;
+}
+
+.cn-10-last {
+    font-size: 3vw;
+    text-orientation: unset;
+    writing-mode: unset;
+    margin-top: 50vh;
+}
+
+
+
+.chapter-name {
+    position: absolute;
+    width: 6vw;
+    left: 50%;
+    margin-left: -3.6vw;
+    bottom: 6vh;
+    font-size: 3vw;
+    transform: rotate(-90deg);
+}
+
+
+
+
+
+.nb2 {
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    right: 1vw;
+    top: 1vh;
+    border-right: 0px;
+    z-index: 13;
+}
+
+/* ___________________Scroll-Bar____ */
+
+.scroll-curve {
+    box-sizing: border-box;
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    left: 50%;
+    margin-left: -3vw;
+    margin-top: 1vw;
+
+    border: 0.1vw solid;
+    border-radius: 50%;
+
+    z-index: -110;
+
+}
+
+.sc2 {
+    bottom: 1vw;
+}
+
+.scroll-curve-cover {
+    box-sizing: border-box;
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    left: 50%;
+    margin-left: -3vw;
+    margin-top: 4vw;
+    background-color: white;
+    z-index: -100;
+
+}
+
+.scc2 {
+    bottom: 4vw;
+}
+
+.scroll-bar-line {
+    height: 70vh;
+    border-right: solid 0.1vw;
+    margin-left: 4.25vw;
+    margin-top: 3vh;
+    z-index: 100;
+
+}
+
+.chapter-container {
+    position: absolute;
+    height: 70vh;
+    width: 2vw;
+    left: 50%;
+    margin-left: -0.9vw;
+    margin-top: 3vh;
+    display: flex;
+
+    z-index: 2;
+
+
+
+}
+
+.scroll-bar-chapter {
+    box-sizing: border-box;
+    border-bottom: solid 0.1vw;
+
+    flex-grow: 1;
+}
+
+.scroll-bar-chapter:hover {
+    background-color: blue;
+    opacity: 100%;
+    -webkit-box-shadow: 0px 0px 26px 5px blue;
+    box-shadow: 0px 0px 26px 5px blue;
+    cursor: pointer;
+
+}
+
+.sbc-last {
+    border-bottom: none;
+}
+
+.scroll-dot {
+    position: absolute;
+    height: 2vw;
+    width: 2vw;
+    margin-left: -0.1vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+
+
+/* _______________Statement-Bereich____________________ */
+
+.statement-bar {
+    position: fixed;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    height: 20vh;
+    bottom: 1vh;
+    /* background-color:white; */
+    box-sizing: border-box;
+    /* border:solid 2px blue; */
+    /* border-bottom:solid 1px; */
+
+    border-radius: 4vw;
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.statement-bar-shadow {
+    position: fixed;
+    width: 83vw;
+    left: 50%;
+    margin-left: -41.5vw;
+    height: 21vh;
+    bottom: 0vh;
+    box-shadow: 0 -4px 7px -5px rgba(0, 0, 0, 0.87);
+    z-index: 100;
+}
+
+.statement-line {
+    position: absolute;
+    height: 10vh;
+    width: 100vw;
+    top: 0;
+    border-bottom: 2px solid blue;
+    z-index: -1;
+
+}
+
+.statement-container {
+    background-color: rgb(0, 0, 0);
+    border: solid 2px blue;
+    border-radius: 0.4vw;
+    color: blue;
+    /* letter-spacing: -0.3em; */
+    padding: 0 2vw 1.5vw 2vw;
+    padding-bottom: 1.5vw;
+    width: 87vw;
+    max-height: 15vh;
+    box-shadow: 0 0 20px blue;
+
+}
+
+/* _________einzelne Statemnets_________________________ */
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 20px blue;
+    }
+}
+
+@keyframes opa {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+
+    }
+
+}
+
+.statement {
+    font-size: 2.8vw;
+    /* animation: glow 0.5s 2 alternate; */
+    animation: opa 1s, glow 0.6s 2 alternate;
+
+}
+
+.statement2 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+
+}
+
+.statement3 {
+    font-size: 5vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement4 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement5 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement6 {
+    font-size: 2.8vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement7 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement8 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement9 {
+    font-size: 2.8vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement10 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement11 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement12 {
+    font-size: 2.7vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement13 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement14 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement15 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement16 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement17 {
+    font-size: 2.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement18 {
+    font-size: 2.7vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement19 {
+    font-size: 3.6vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+.statement20 {
+    font-size: 5vw;
+    animation: opa 1s, glow 0.6s 2 alternate;
+}
+
+
+
+
+/* ___________________________Befestigung____________________ */
+
+
+/* ___________________MAIN_______________________________________________ */
+
+.main {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    flex-grow: 1;
+    width: 79vw;
+    margin-top: 1vh;
+    border-radius: 0px;
+    z-index: 4;
+    margin-bottom: 3vh;
+}
+
+
+
+/* ________________Empfang____________________________________________*/
+.empfang {
+    height: 49vw;
+    width: inherit;
+    scroll-snap-align: start;
+    text-align: center;
+
+
+}
+
+
+
+.title {
+    height: 40vw;
+    position: absolute;
+    width: 76vw;
+    left: 50%;
+    margin-left: -38vw;
+    margin-top: 0.5vw;
+
+    font-size: 140pt;
+    letter-spacing: 0.09em;
+}
+
+/* _________SVG Title______________ */
+
+.uniscript-svg {
+    margin-top: unset;
+    margin: unset;
+    float: unset;
+    width: unset;
+    color: unset;
+    margin-top: 0vw;
+
+}
+
+#curve {
+    fill: transparent;
+
+}
+
+/* _________welcoome_____________ */
+
+.welcome {
+    height: 26vw;
+    position: absolute;
+    width: 50vw;
+    left: 50%;
+    margin-left: -25vw;
+    margin-top: 16vw;
+
+    font-size: 2.5vw;
+    line-height: 3vw;
+
+    text-align: center;
+
+}
+
+.welc-cont {
+    height: 8vw;
+    display: block;
+
+}
+
+.wc1-3 {
+    text-align: center;
+}
+
+.wc2-4 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.wc-kyr {
+    font-family: "Uniscript-kyr";
+}
+
+.wc-grie {
+    font-family: "Uniscript-grie";
+}
+
+.wc-chin {
+    font-family: "Uniscript-chin";
+}
+
+.wc-hindi {
+    font-family: "Uniscript-hindi";
+}
+
+.fake-hindi-2{
+    width:11vw;
+    margin-top:-5vw;
+}
+
+.fake-hindi-2:hover {
+    cursor: url('./read1.png'),
+    auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),
+    auto;
+}
+
+/* ______________Von der Zahl zum Wort____________________________ */
+
+.abstract {
+    height: 120vw;
+    scroll-snap-align: start;
+}
+
+.abstract-title {
+    padding-top: 0.5vw;
+    height: 18vw;
+    text-align: center;
+
+}
+
+.chapter-title {
+    font-size: 2.2vw;
+    line-height: 2.3vw;
+    color: white;
+    background-image: linear-gradient(to bottom, transparent, transparent 17%, rgb(0, 0, 0) 17%, rgb(0, 0, 0));
+}
+
+/* ___________Schema___________ */
+
+.zahlzeichen-cont {
+    height: 14vw;
+    padding: 0 4vw 0 4vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.column {
+    display: flex;
+    flex-grow: 1;
+}
+
+.c1 {
+    border-bottom: 1px solid;
+}
+
+.number {
+
+    flex-grow: 1;
+    width: 1.25vw;
+    border-right: 1px solid;
+
+    text-align: center;
+}
+
+
+.n-last {
+    border-right: 0;
+}
+
+/* ___________ */
+
+.pre-letters-area {
+    height: 23vw;
+
+}
+
+/* _________ */
+
+.line-1-cont {
+    height: 12vw;
+    display: flex;
+}
+
+.line1 {
+    flex-grow: 1;
+}
+
+.l1 {
+
+    border-right: solid 1px;
+}
+
+/* _______________ */
+
+.pre-letters-cont {
+    height: 9vw;
+    display: flex;
+    padding: 0 2vw 0 2vw;
+}
+
+.pre-letters {
+    height: 7vw;
+    margin-top: 2vw;
+    flex-grow: 1;
+    border-right: solid 1px;
+
+    text-align: center;
+
+    display: flex;
+    padding: 0 1vw 0 1vw;
+}
+
+.pre-letters-svg {
+    width: 4vw;
+    flex-grow: 1;
+}
+
+.pl-last {
+    border-right: 0;
+}
+
+/* ________ */
+
+.line-2-cont {
+    height: 12vw;
+    display: flex;
+    padding: 0 11vw 0 11vw;
+}
+
+.line2 {
+    flex-grow: 1;
+    border-right: solid 1px;
+}
+
+.l2 {
+    border-left: solid 1px;
+}
+
+/* ________________________ */
+
+.letters-area {
+    width: inherit;
+    height: 14vw;
+    font-size: 14vw;
+    display: flex;
+    padding: 0 3vw 0 3vw;
+    vertical-align: middle;
+    margin-top: 8vw;
+}
+
+.letters {
+    flex-grow: 1;
+    width: 2vw;
+    vertical-align: middle;
+}
+
+/* __________________________ */
+
+.word-area {
+    height: 27.5vw;
+}
+
+.line3 {
+    height: 8vw;
+    display: flex;
+    margin-top: 1vw;
+}
+
+.word-container {
+    height: 19.5vw;
+    text-align: center;
+    font-size: 14vw;
+    margin-top: -2vw;
+}
+
+/* ___________________Konzept_______________________________ */
+.concept {
+    height: 112vw;
+
+}
+
+.concept-title {
+    height: 13vw;
+    text-align: center;
+
+}
+
+.concept-1-cont {
+    position: absolute;
+    height: 20vw;
+    width: 46vw;
+    left: 50%;
+    margin-left: -23vw;
+    text-align: center;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+
+}
+
+.concept-2-cont {
+    margin-top: 25vw;
+    height: 42vw;
+    display: flex;
+}
+
+.concept-text-2-3 {
+    flex-grow: 1;
+    width: 50px;
+
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+
+
+
+}
+
+.ct-2 {
+    text-align: center;
+
+    padding-left: 10vw;
+    padding-right: 1vw;
+
+}
+
+.ct-3 {
+    text-align: center;
+    hyphens: auto;
+    padding-right: 10vw;
+    padding-left: 1vw;
+    padding-top: 17vw;
+
+}
+
+.concept-3-cont {
+    height: 14vw;
+    position: absolute;
+    height: 17vw;
+    width: 50vw;
+    left: 50%;
+    margin-left: -25vw;
+    text-align: center;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+}
+
+/* ________________________Beispiele_________________________________ */
+.example-area {
+    height: 160vw;
+    width: inherit;
+}
+
+.example-container {
+    height: 35vw;
+    margin-bottom: 3vw;
+}
+
+.ec3 {
+    height: 42vw;
+}
+
+.example-desc {
+    height: 2.5vw;
+    font-size: 1.7vw;
+}
+
+.example-line {
+    display: flex;
+    height: 2vw;
+}
+
+.example {
+
+    margin-top: 1vw;
+    height: 34vw;
+
+    font-size: 15vw;
+    line-height: 11vw;
+}
+
+.ex1 {
+    font-family: "Uniscript-kyr";
+}
+
+.ex2 {
+    font-family: "Uniscript-chin";
+}
+
+.ex3 {
+    font-family: "Uniscript-grie";
+}
+
+.ex4 {
+    font-family: "Uniscript-hindi";
+}
+
+.fake-hindi{
+    width:60vw;
+}
+
+.fake-hindi:hover{
+    cursor: url('./read1.png'),
+    auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),
+    auto;
+
+}
+
+/* __________________Anatomie______________________ */
+
+.anatomy {
+    height: 110vw;
+}
+
+.anatomy-title {
+    padding-top: 0.5vw;
+    height: 12vw;
+    text-align: center;
+}
+
+.ana-text-1{
+    font-size:1.7vw;
+    line-height: 1.7vw;
+    margin-bottom:3vw;
+    padding-right:15vw;
+    padding-left:15vw;
+    
+}
+
+.ana-cont {
+    height: 42vw;
+    display: flex;
+    padding-left: 7vw;
+    padding-right: 7vw;
+
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+}
+
+.ana2 {
+    height: 50vw;
+}
+
+.ana-left {
+    flex-grow: 1;
+    width: 1px;
+    padding-right: 3vw;
+    text-align: center;
+
+}
+
+.ana-right {
+    width: 1px;
+    flex-grow: 1;
+    padding-left: 3vw;
+    text-align: center;
+    padding-right: 0vw;
+
+}
+
+.ana-right p {
+    margin: 0.5em;
+
+}
+
+.ana-left p {
+    margin-bottom: 1.7em;
+}
+
+.ana-svg-1 {
+    width: 26vw;
+    position: relative;
+    margin-top: 2vw;
+}
+
+.ana-svg-2 {
+    width: 26vw;
+    position: relative;
+    margin-top: 2vw;
+}
+
+/* ________DEsign_______________________________ */
+
+.design-area {
+    height: 235vw;
+    text-align: center;
+}
+
+.design-title {
+    height: 5vw;
+}
+
+.design-column {
+    height: 210vw;
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    margin-left: -25vw;
+
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+}
+
+.design-text-1 {
+    height: 12vw;
+    width: 30vw;
+    position: absolute;
+    left: 50%;
+    margin-left: -15vw;
+    top: 5vw;
+}
+
+.design-img-cont {
+
+    height: 42vw;
+    text-align: justify;
+
+}
+
+.d-a-d {
+    padding-bottom: 1vw;
+}
+
+.dic1 {
+    margin-top: 16vw;
+}
+
+.design-text-2 {
+    height: 16vw;
+    text-align: center;
+}
+
+.design-text-3 {
+    height: 5vw;
+    text-align: center;
+
+}
+
+.design-img2-cont {
+    display: flex;
+    position: absolute;
+    height: 10vw;
+    width: 60vw;
+    left: 50%;
+    margin-left: -30vw;
+    margin-top: 210vw;
+}
+
+.d-img-2 {
+    flex-grow: 1;
+}
+
+.gif {
+    width: 50vw;
+    margin-top: 1vw;
+}
+
+.gif-2 {
+    width: 14vw;
+}
+
+
+/* ___________________Kombination___________________________ */
+
+.combination-area {
+    height: 154vw;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+}
+
+.combination-title {
+    height: 20vw;
+    margin-top: 8vw;
+}
+
+.comb-text-1 {
+    height: 12vw;
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    margin-left: -25vw;
+    /* position:absolute;
+    left:50%;
+    margin-left:-9.5vw;
+    top:7vw; */
+
+}
+
+.comb-vis-1 {
+    margin-top: 12vw;
+    height: 16vw;
+}
+
+.comb-vis-2 {
+    height: 14vw;
+}
+
+.comb-cont {
+    height: 45vw;
+    display: flex;
+    padding-left: 7vw;
+    padding-right: 7vw;
+
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+}
+
+.cc2 {
+    height: 35vw;
+}
+
+.comb-left {
+    flex-grow: 1;
+    width: 1px;
+    padding-right: 0vw;
+    text-align: center;
+
+}
+
+.comb-right {
+    width: 1px;
+    flex-grow: 1;
+    padding-left: 0vw;
+    text-align: center;
+
+}
+
+.comb-text-2{
+    width:40vw;
+    position:absolute;
+    left:50%;
+    margin-left:-20vw;
+}
+
+
+.comb-img-1 {
+    position: relative;
+    width: 70vw;
+}
+
+.comb-img-2 {
+    position: relative;
+    width: 65vw;
+    margin-top: 2vw;
+}
+
+.comb-img-3 {
+    position: relative;
+    left: -3vw;
+    width: 20vw;
+    margin-top: 10vw;
+}
+
+.comb-img-4 {
+    position: relative;
+    width: 27vw;
+    margin-top: 2vw;
+    margin-left:2vw;
+
+}
+
+.comb-example{
+    font-size:3vw;
+    line-height:5vw;
+}
+
+.comb-ex-line{
+    height:1.5vw;
+    width:16vw;
+    border-right:1px solid;
+}
+
+.font-gen{
+    font-family: "Uniscript-gen";
+}
+
+/* _________________Generator_________________________ */
+
+.generator-area {
+    height: 75vw;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+}
+
+
+.generator-title {
+    height: 6vw;
+
+}
+
+.generator-text {
+    height: 14vw;
+    width: 60vw;
+    position: absolute;
+    left: 50%;
+    margin-left: -30vw;
+
+}
+
+.machine-area {
+    margin-top: 18vw;
+    height: 50vw;
+    width: 66vw;
+    position: absolute;
+    left: 50%;
+    margin-left: -33vw;
+}
+
+.input-field {
+    height: 13vw;
+    margin-bottom: 2vw;
+}
+
+
+.translation-input {
+    box-sizing: border-box;
+    display: block;
+    height: 8vw;
+    width: 66vw;
+    resize: none;
+    border-radius: 0;
+    color: blue;
+    font-size:1.6vw;
+}
+
+.input-button-area {
+    height: 2vw;
+}
+
+.ipd{
+    margin-top:0.4vw;
+    
+}
+
+.ipd:hover{
+    color:red;
+    cursor: url('./read1.png'),
+    auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),
+    auto;
+
+}
+
+.input-button {
+    width:6vw;
+    
+    box-sizing: border-box;
+    height: 2vw;
+    
+    font-size: 1.7vw;
+    background-color: white;
+    border: 1px solid black;
+    border-radius:5vw;
+
+}
+
+.ip-b2{
+}
+
+.ex-l-gen{
+    height:1vw;
+}
+
+.input-button:hover{
+    background-color:blue;
+    cursor:pointer;
+}
+
+
+.result-field {
+    height: 25vw;
+}
+
+.svg-results {
+    height: 18vw;
+    border: 1px solid;
+    border-radius: 0px;
+}
+
+svg {
+    margin: 0px 1px 6px 1px;
+    float: left;
+    width: 40px;
+    color: black;
+
+
+}
+
+Path {
+    fill: black;
+}
+.download-button-area{
+    height:2vw;
+}
+
+.download-button {
+    height: 2vw;
+    padding-bottom: 3vw;
+    font-size: 1.7vw;
+    background-color: white;
+    border: 1px solid;
+    border-top: none;
+    width: 20vw;
+}
+
+.download-button:hover {
+    background-color: blue;
+    -webkit-box-shadow: 0px 0px 26px 5px blue;
+    box-shadow: 0px 0px 26px 5px blue;
+}
+
+
+/* ____________Zeichensatz_____________ */
+
+.zeichensatz-area {
+    height: 228vw;
+
+}
+
+.zeichensatz-title{
+    height:10vw;
+}
+
+.zeichensatz {
+    position: absolute;
+    left: 50%;
+    margin-left: -30vw;
+    font-size: 6vw;
+    width: 60vw;
+    position: relative;
+
+
+}
+
+.zeichensatz-text {
+    width: 60vw;
+    
+
+
+}
+.zs-row{
+    display:flex;
+    justify-content:space-between;
+    
+}
+
+.zs-d{
+    font-size:1.7vw;
+    text-align:center;
+}
+
+.zs-span{
+    text-align:center;
+    width:5vw;
+}
+
+/* ___________________Abschied__________________________ */
+
+.abschied-area {
+    height: 45vw;
+}
+
+.abschieds-satz {
+    position: absolute;
+    height: 10vw;
+    width: 30vw;
+    left: 50%;
+    margin-left: -15vw;
+    margin-top: 5vw;
+    font-size:1.7vw;
+
+
+}
+
+.title-end {
+    height: 40vw;
+    position: absolute;
+    width: 88vw;
+    left: 50%;
+    margin-left: -44vw;
+    margin-top: 0.5vw;
+
+    font-size: 150pt;
+    letter-spacing: 0.05em;
+}
+
+#curve-2 {
+    fill: transparent;
+
+}
+
+.rotate-svg {
+    transform: rotate(180deg);
+    width: 76vw;
+
+}
+
+/* ___________________________ */
+span:hover {
+    color: red;
+    cursor: url('./read1.png'), auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x), auto;
+}
+
+
+
+text:hover {
+    color: red;
+    cursor: url('./read1.png'),auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x), auto;
+    fill: red;
+}
+
+
+.statement-container:hover {
+
+    cursor: url('./read1.png'), auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),auto;
+}
+
+.chapter-name:hover {
+    color: blue;
+    cursor: url('./read1.png'),auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),auto;
+
+}
+
+.chapter-number:hover {
+    color: red;
+    cursor: url('./read1.png'),
+        auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),auto;
+
+}
+
+button:hover {
+    color: red;
+}
+
+.number:hover {
+    color: red;
+    cursor: url('./read1.png'),auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),auto;
+
+}
+
+.pre-letters-svg:hover {
+    color: red;
+    cursor: url('./read1.png'),auto;
+    cursor: -webkit-image-set(url('./read1.png') 1x, url('./read1.png') 2x),auto;
+
+}
